@@ -3,8 +3,6 @@ import java.io.FileReader;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
 
 public class Main {
     public static void main(String[] args) {
@@ -26,16 +24,16 @@ public class Main {
 
             reader.close();
 
-            System.out.println(Arrays.deepToString(initial));
+            printMatrix(initial);
 
-            System.out.println(Arrays.deepToString(sudokuSolverRAndP(initial)));
+            sudokuSolverRAndP(initial);
 
         } catch (Exception e) {
             System.err.println(e);
         }
     }
 
-    public static MutableByte[][] sudokuSolverRAndP(MutableByte[][] initialState) {
+    public static void sudokuSolverRAndP(MutableByte[][] initialState) {
 
         Queue<Node> aliveNodes = new LinkedList<Node>();
 
@@ -57,8 +55,6 @@ public class Main {
                     X.sol[X.row.value][X.col.value] = new MutableByte(k);
                     if (isValid(X.row.value, X.col.value, X.sol)) {
                         addNewAliveNode(aliveNodes, X);
-                        System.out.println(aliveNodes.size());
-                        System.out.println(Arrays.deepToString(X.sol));
                     }
                     X.sol[X.row.value][X.col.value] = temp;
                 }
@@ -66,20 +62,19 @@ public class Main {
                 addNewAliveNode(aliveNodes, X);
             }
         }
-        return X.sol;
     }
 
     private static void addNewAliveNode(Queue<Node> aliveNodes, Node x) {
         Node y = new Node();
         if (x.row.value == 8 && x.col.value == 8) {
-            System.out.println(Arrays.toString(x.sol));
+            printMatrix(x.sol);
         } else if (x.row.value < 8 && x.col.value == 8) {
-            y.sol = Arrays.stream(x.sol).map(it -> Arrays.stream(it).toArray(MutableByte[]::new)).toList().toArray(new MutableByte[9][9]);
+            y.sol = Arrays.stream(x.sol).map(it -> Arrays.stream(it).toArray(MutableByte[]::new)).toArray(MutableByte[][]::new);
             y.row = new MutableByte((byte) (x.row.value+1));
             y.col = new MutableByte((byte) 0);
             aliveNodes.add(y);
         } else if (x.row.value <= 8 && x.col.value < 8) {
-            y.sol = Arrays.stream(x.sol).map(it -> Arrays.stream(it).toArray(MutableByte[]::new)).toList().toArray(new MutableByte[9][9]);
+            y.sol = Arrays.stream(x.sol).map(it -> Arrays.stream(it).toArray(MutableByte[]::new)).toArray(MutableByte[][]::new);
             y.row = new MutableByte((x.row.value));
             y.col = new MutableByte((byte) (x.col.value+1));
             aliveNodes.add(y);
@@ -108,13 +103,14 @@ public class Main {
 
         k = correspondence3x3(i);
 
-        while (k < correspondence3x3(i) + 3 && valid) {
+        while (k <= correspondence3x3(i) + 2 && valid) {
             l = correspondence3x3(j);
-            while (l < correspondence3x3(j) + 3 && valid) {
+            while (l <= correspondence3x3(j) + 2 && valid) {
                 if (sol[i][j].value == sol[k][l].value && i != k && j != l) {
                     valid = false;
                 }
                 l++;
+
             }
             k++;
         }
@@ -123,21 +119,17 @@ public class Main {
     }
 
     private static byte correspondence3x3(byte i) {
-        byte k, result = 0;
+        byte initialIndex;
 
-        if (i % 3 == 0) {
-            k = (byte) (i / 3);
+        if (i >= 0 && i <= 2) {
+            initialIndex = 0;
+        } else if (i >= 3 && i <= 5) {
+            initialIndex = 3;
         } else {
-            k = (byte) (i / 3 + 1);
+            initialIndex = 6;
         }
 
-        switch (k) {
-            case 1 -> result = 0;
-            case 2 -> result = 3;
-            case 3 -> result = 6;
-        }
-
-        return result;
+        return initialIndex;
     }
 
     private static boolean[][] initialize(MutableByte[][] initial) {
@@ -151,6 +143,12 @@ public class Main {
         }
 
         return response;
+    }
+
+    private static void printMatrix(MutableByte[][] sol){
+        System.out.println("-".repeat(20));
+        Arrays.stream(sol).forEach(it -> System.out.println(Arrays.toString(it)));
+        System.out.println("-".repeat(20));
     }
 
 }

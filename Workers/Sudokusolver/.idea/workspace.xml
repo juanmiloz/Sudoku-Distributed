@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d2eddbbd-6eba-4552-b21c-f7c43113de97" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../src/main/resource/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sudokusolver.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/input.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sudokusolver/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sudokusolver/MutableByte.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Sudokusolver/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Node.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2HscKo9CL0s3jbOkwE1PARobKkO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "true",
+    "extract.method.default.visibility": "private",
+    "last_opened_file_path": "D:/OneDrive - Universidad Icesi (@icesi.edu.co)/University/7th Semester/Arquitectura de Software/Sudokusolver",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15039062",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "cn.yiiguxing.plugin.translate",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\OneDrive - Universidad Icesi (@icesi.edu.co)\University\7th Semester\Arquitectura de Software\Sudokusolver" />
+      <recent name="D:\OneDrive - Universidad Icesi (@icesi.edu.co)\University\7th Semester\Arquitectura de Software\Sudokusolver\out" />
+      <recent name="D:\OneDrive - Universidad Icesi (@icesi.edu.co)\University\7th Semester\Arquitectura de Software\Sudokusolver\out\production" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Sudokusolver" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d2eddbbd-6eba-4552-b21c-f7c43113de97" name="Changes" comment="" />
+      <created>1669077170705</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669077170705</updated>
+      <workItem from="1669077172170" duration="10140000" />
+      <workItem from="1669326218684" duration="717000" />
+      <workItem from="1669496662703" duration="1424000" />
+      <workItem from="1669650614376" duration="1511000" />
+      <workItem from="1669655943076" duration="10000" />
+      <workItem from="1670161937945" duration="89000" />
+      <workItem from="1670162239765" duration="9674000" />
+      <workItem from="1670172998351" duration="7558000" />
+      <workItem from="1670187811509" duration="8808000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="Node" memberName="sol" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
