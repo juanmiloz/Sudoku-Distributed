@@ -1,7 +1,11 @@
+package edu.icesi;
+
+import DataStructures.MutableByte;
+import DataStructures.Node;
+import DataStructures.PersistentQueue;
 import interfaces.SudokuSolverI;
 
 import java.util.Arrays;
-import java.util.LinkedList;
 import java.util.Queue;
 
 public class SudokuSolver implements SudokuSolverI {
@@ -10,7 +14,7 @@ public class SudokuSolver implements SudokuSolverI {
 
     public void sudokuSolverRAndP(MutableByte[][] initialState) {
 
-        Queue<Node> aliveNodes = new LinkedList<Node>();
+        Queue<Node> aliveNodes = new PersistentQueue<>();
 
         Node X = new Node();
 
@@ -18,7 +22,7 @@ public class SudokuSolver implements SudokuSolverI {
         X.col = new MutableByte((byte) 0);
         X.sol = initialState;
 
-        aliveNodes.add(X);
+        aliveNodes.offer(X);
 
         boolean[][] initial = initialize(initialState);
 
@@ -48,12 +52,12 @@ public class SudokuSolver implements SudokuSolverI {
             y.sol = Arrays.stream(x.sol).map(it -> Arrays.stream(it).toArray(MutableByte[]::new)).toArray(MutableByte[][]::new);
             y.row = new MutableByte((byte) (x.row.value + 1));
             y.col = new MutableByte((byte) 0);
-            aliveNodes.add(y);
+            aliveNodes.offer(y);
         } else if (x.row.value <= 8 && x.col.value < 8) {
             y.sol = Arrays.stream(x.sol).map(it -> Arrays.stream(it).toArray(MutableByte[]::new)).toArray(MutableByte[][]::new);
             y.row = new MutableByte((x.row.value));
             y.col = new MutableByte((byte) (x.col.value + 1));
-            aliveNodes.add(y);
+            aliveNodes.offer(y);
         }
     }
 
@@ -149,20 +153,3 @@ public class SudokuSolver implements SudokuSolverI {
     }
 }
 
-class Node {
-    public MutableByte row, col;
-    public MutableByte[][] sol;
-}
-
-class MutableByte {
-    public byte value;
-
-    public MutableByte(byte i) {
-        value = Byte.parseByte(Byte.toString(i));
-    }
-
-    @Override
-    public String toString() {
-        return Byte.toString(value);
-    }
-}

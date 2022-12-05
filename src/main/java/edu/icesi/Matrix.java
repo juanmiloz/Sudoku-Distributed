@@ -1,3 +1,5 @@
+package edu.icesi;
+
 import interfaces.MatrixGeneratorI;
 
 import java.util.Arrays;
