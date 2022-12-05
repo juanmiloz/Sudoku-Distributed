@@ -1,0 +1,13 @@
+<icegrid>
+    <application name="Simple">
+        <node name="node1">
+            <server id="SimpleServer" exe="java" activation="on-demand">
+                <option>-jar</option>
+                <option>../Worker/build/libs/worker.jar</option>
+                <adapter name="Solver" endpoints="tcp -h localhost">
+                    <object identity="GenerateMatrix" type="::Sudoku::SolverI" property="Identity"/>
+                </adapter>
+            </server>
+        </node>
+    </application>
+</icegrid>

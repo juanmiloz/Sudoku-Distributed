@@ -10,9 +10,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/Intermediary" />
-            <option value="$PROJECT_DIR$/Master" />
-            <option value="$PROJECT_DIR$/Workers" />
+            <option value="$PROJECT_DIR$/intermediary" />
+            <option value="$PROJECT_DIR$/master" />
+            <option value="$PROJECT_DIR$/worker" />
           </set>
         </option>
       </GradleProjectSettings>
