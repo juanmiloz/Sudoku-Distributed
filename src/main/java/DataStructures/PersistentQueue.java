@@ -9,7 +9,7 @@ import java.util.Queue;
 
 public class PersistentQueue<Node> implements Queue<Node> {
 
-    private static final long MAX_SIZE = 500000;
+    private static final long MAX_SIZE = 1000000;
 
     private Queue<Node> queue;
     private final SudokuAliveNodesPersistenceI<Node> storage;

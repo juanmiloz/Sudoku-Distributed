@@ -28,7 +28,9 @@ public class FilePrinter implements PrinterI {
         try {
             for (MutableByte[] it : sol) {
                 fos.write(Arrays.toString(it).getBytes());
+                fos.write("\n".getBytes());
             }
+            fos.write("-".repeat(20).getBytes());
             fos.flush();
         } catch (IOException e) {
             throw new RuntimeException(e);
