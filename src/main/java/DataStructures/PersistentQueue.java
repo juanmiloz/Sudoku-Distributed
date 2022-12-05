@@ -9,7 +9,7 @@ import java.util.Queue;
 
 public class PersistentQueue<Node> implements Queue<Node> {
 
-    private static final long MAX_SIZE = 10000000;
+    private static final long MAX_SIZE = 500000;
 
     private Queue<Node> queue;
     private final SudokuAliveNodesPersistenceI<Node> storage;
@@ -22,12 +22,12 @@ public class PersistentQueue<Node> implements Queue<Node> {
 
     @Override
     public int size() {
-        return queue.size();
+        return queue.size()+storage.numAliveNodesSaved();
     }
 
     @Override
     public boolean isEmpty() {
-        return queue.isEmpty();
+        return queue.isEmpty()&&!storage.checkAliveNodesSaved();
     }
 
     @Override

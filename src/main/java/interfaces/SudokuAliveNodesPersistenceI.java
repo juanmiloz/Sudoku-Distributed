@@ -9,4 +9,6 @@ public interface SudokuAliveNodesPersistenceI<Node> {
 
     public boolean checkAliveNodesSaved();
 
+    public int numAliveNodesSaved();
+
 }

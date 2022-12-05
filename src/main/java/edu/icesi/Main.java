@@ -13,10 +13,14 @@ public class Main {
         MatrixGeneratorI generator = new Matrix();
 
         try {
-            String sudokuToSolve = generator.generateMatrix(20);
+            String sudokuToSolve = generator.generateMatrix(4);
             System.out.println(sudokuToSolve);
+            long startTime = System.currentTimeMillis();
+            System.out.println("Start time: " + startTime);
             System.out.println(solver.solve(sudokuToSolve));
-
+            long endTime = System.currentTimeMillis();
+            System.out.println("End time: " + endTime);
+            System.out.println("Time to solve: " + (endTime - startTime) + "ms");
         } catch (Exception e) {
             System.err.println(e);
         }

@@ -15,7 +15,7 @@ public class SudokuAliveNodesPersistence<T> implements SudokuAliveNodesPersisten
 
     private static FSTConfiguration conf;
 
-    private long aliveNodesSaved;
+    private int aliveNodesSaved;
 
     SudokuAliveNodesPersistence() {
         aliveNodesSaved = 0;
@@ -81,6 +81,11 @@ public class SudokuAliveNodesPersistence<T> implements SudokuAliveNodesPersisten
     @Override
     public boolean checkAliveNodesSaved() {
         return aliveNodesSaved > 0;
+    }
+
+    @Override
+    public int numAliveNodesSaved() {
+        return aliveNodesSaved;
     }
 
     private void decreaseAliveNodesSaved() {

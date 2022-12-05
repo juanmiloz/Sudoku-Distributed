@@ -3,6 +3,7 @@ package edu.icesi;
 import DataStructures.MutableByte;
 import DataStructures.Node;
 import DataStructures.PersistentQueue;
+import interfaces.PrinterI;
 import interfaces.SudokuSolverI;
 
 import java.util.Arrays;
@@ -12,9 +13,13 @@ public class SudokuSolver implements SudokuSolverI {
 
     private int numSolutions;
 
+    private PrinterI printer;
+
     public void sudokuSolverRAndP(MutableByte[][] initialState) {
 
         Queue<Node> aliveNodes = new PersistentQueue<>();
+
+        printer = new FilePrinter();
 
         Node X = new Node();
 
@@ -46,7 +51,7 @@ public class SudokuSolver implements SudokuSolverI {
     private void addNewAliveNode(Queue<Node> aliveNodes, Node x) {
         Node y = new Node();
         if (x.row.value == 8 && x.col.value == 8) {
-            printMatrix(x.sol);
+            printer.printMatrix(x.sol);
             numSolutions++;
         } else if (x.row.value < 8 && x.col.value == 8) {
             y.sol = Arrays.stream(x.sol).map(it -> Arrays.stream(it).toArray(MutableByte[]::new)).toArray(MutableByte[][]::new);
@@ -123,12 +128,6 @@ public class SudokuSolver implements SudokuSolverI {
         }
 
         return response;
-    }
-
-    public void printMatrix(MutableByte[][] sol) {
-        System.out.println("-".repeat(20));
-        Arrays.stream(sol).forEach(it -> System.out.println(Arrays.toString(it)));
-        System.out.println("-".repeat(20));
     }
 
     private MutableByte[][] parseString(String sudoku) {
