@@ -5,12 +5,14 @@ module Sudoku{
 
     interface MatrixGeneratorI{
         string generateStage(int quantityNumbers);
-    }
+    };
+
     interface ControllerI{
         void addSolution(StringMatrix solution);
         void addElementToStack(StringMatrix element);
-    }
+    };
+
     interface SolverI{
         void callMatrix();
-    }
-}
+    };
+};
