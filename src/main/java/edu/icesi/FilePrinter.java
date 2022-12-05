@@ -31,6 +31,7 @@ public class FilePrinter implements PrinterI {
                 fos.write("\n".getBytes());
             }
             fos.write("-".repeat(20).getBytes());
+            fos.write("\n".getBytes());
             fos.flush();
         } catch (IOException e) {
             throw new RuntimeException(e);
