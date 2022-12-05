@@ -1,39 +1,14 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
+import interfaces.SudokuSolverI;
+
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Main {
-    public static void main(String[] args) {
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader("input.txt"));
-            MutableByte[][] initial = new MutableByte[9][9];
-            String line;
-            byte row = 0;
-            while ((line = reader.readLine()) != null) {
+public class SudokuSolver implements SudokuSolverI {
 
-                String temp[] = line.split(",");
+    private int numSolutions;
 
-                for (byte col = 0; col < temp.length; col++) {
-                    int byteT = Integer.parseInt(temp[col]);
-                    initial[row][col] = new MutableByte((byte) byteT);
-                }
-                row++;
-            }
-
-            reader.close();
-
-            printMatrix(initial);
-
-            sudokuSolverRAndP(initial);
-
-        } catch (Exception e) {
-            System.err.println(e);
-        }
-    }
-
-    public static void sudokuSolverRAndP(MutableByte[][] initialState) {
+    public void sudokuSolverRAndP(MutableByte[][] initialState) {
 
         Queue<Node> aliveNodes = new LinkedList<Node>();
 
@@ -64,24 +39,25 @@ public class Main {
         }
     }
 
-    private static void addNewAliveNode(Queue<Node> aliveNodes, Node x) {
+    private void addNewAliveNode(Queue<Node> aliveNodes, Node x) {
         Node y = new Node();
         if (x.row.value == 8 && x.col.value == 8) {
             printMatrix(x.sol);
+            numSolutions++;
         } else if (x.row.value < 8 && x.col.value == 8) {
             y.sol = Arrays.stream(x.sol).map(it -> Arrays.stream(it).toArray(MutableByte[]::new)).toArray(MutableByte[][]::new);
-            y.row = new MutableByte((byte) (x.row.value+1));
+            y.row = new MutableByte((byte) (x.row.value + 1));
             y.col = new MutableByte((byte) 0);
             aliveNodes.add(y);
         } else if (x.row.value <= 8 && x.col.value < 8) {
             y.sol = Arrays.stream(x.sol).map(it -> Arrays.stream(it).toArray(MutableByte[]::new)).toArray(MutableByte[][]::new);
             y.row = new MutableByte((x.row.value));
-            y.col = new MutableByte((byte) (x.col.value+1));
+            y.col = new MutableByte((byte) (x.col.value + 1));
             aliveNodes.add(y);
         }
     }
 
-    private static boolean isValid(byte i, byte j, MutableByte[][] sol) {
+    private boolean isValid(byte i, byte j, MutableByte[][] sol) {
         boolean valid = true;
         byte k = 0, l;
 
@@ -118,7 +94,7 @@ public class Main {
         return valid;
     }
 
-    private static byte correspondence3x3(byte i) {
+    private byte correspondence3x3(byte i) {
         byte initialIndex;
 
         if (i >= 0 && i <= 2) {
@@ -132,7 +108,7 @@ public class Main {
         return initialIndex;
     }
 
-    private static boolean[][] initialize(MutableByte[][] initial) {
+    private boolean[][] initialize(MutableByte[][] initial) {
 
         boolean[][] response = new boolean[9][9];
 
@@ -145,12 +121,32 @@ public class Main {
         return response;
     }
 
-    private static void printMatrix(MutableByte[][] sol){
+    public void printMatrix(MutableByte[][] sol) {
         System.out.println("-".repeat(20));
         Arrays.stream(sol).forEach(it -> System.out.println(Arrays.toString(it)));
         System.out.println("-".repeat(20));
     }
 
+    private MutableByte[][] parseString(String sudoku) {
+        MutableByte[][] response = new MutableByte[9][9];
+        String[] rows = sudoku.split("\n");
+        for (byte row = 0; row < 9; row++) {
+            String[] cols = rows[row].split(",");
+            for (byte col = 0; col < rows.length; col++) {
+                int byteT = Integer.parseInt(cols[col]);
+                response[row][col] = new MutableByte((byte) byteT);
+            }
+        }
+        return response;
+    }
+
+    @Override
+    public int solve(String sudoku) {
+        numSolutions = 0;
+        MutableByte[][] initial = parseString(sudoku);
+        sudokuSolverRAndP(initial);
+        return numSolutions;
+    }
 }
 
 class Node {

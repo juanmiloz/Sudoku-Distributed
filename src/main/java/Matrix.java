@@ -1,12 +1,15 @@
-import Sudoku.MatrixGenerator;
-import com.zeroc.Ice.Current;
+import interfaces.MatrixGeneratorI;
 
-public class Matrix implements  MatrixGenerator{
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
+public class Matrix implements MatrixGeneratorI {
 
     private final String ANSI_GREEN = "\u001B[32m";
     private final String ANSI_RESET = "\u001B[0m";
+
     @Override
-    public String generateMatrix(int numbers, Current current) {
+    public String generateMatrix(int numbers) {
         int[][] matrix = new int[9][9];
 
         for (int i = 0; i < numbers; i++) {
@@ -30,40 +33,42 @@ public class Matrix implements  MatrixGenerator{
             }
             matrix[ranRow][ranCol] = ranNum;
         }
+        printMatrixFormatted(matrix);
+
         return printMatrix(matrix);
     }
 
-    private boolean evaluateSquare(int[][] matrix, int row, int col, int num){
-        int minRow ;
-        int maxRow ;
-        int minCol ;
-        int maxCol ;
+    private boolean evaluateSquare(int[][] matrix, int row, int col, int num) {
+        int minRow;
+        int maxRow;
+        int minCol;
+        int maxCol;
 
-        if(row >= 0 && row <= 2){
+        if (row >= 0 && row <= 2) {
             minRow = 0;
             maxRow = 2;
-        }else if(row >= 3 && row <= 5){
+        } else if (row >= 3 && row <= 5) {
             minRow = 3;
             maxRow = 5;
-        }else {
+        } else {
             minRow = 6;
             maxRow = 8;
         }
 
-        if(col >= 0 && col <= 2){
+        if (col >= 0 && col <= 2) {
             minCol = 0;
             maxCol = 2;
-        }else if(col >= 3 && col <= 5){
+        } else if (col >= 3 && col <= 5) {
             minCol = 3;
             maxCol = 5;
-        }else {
+        } else {
             minCol = 6;
             maxCol = 8;
         }
 
-        for(int i = minRow; i <= maxRow ; i++){
-            for(int j = minCol; j <= maxCol; j++){
-                if(matrix[i][j] == num){
+        for (int i = minRow; i <= maxRow; i++) {
+            for (int j = minCol; j <= maxCol; j++) {
+                if (matrix[i][j] == num) {
                     return false;
                 }
             }
@@ -82,15 +87,15 @@ public class Matrix implements  MatrixGenerator{
     }
 
     private boolean evaluateColumn(int[][] matrix, int col, int num) {
-        for (int i = 0; i < matrix.length; i++) {
-            if (matrix[i][col] == num) {
+        for (int[] ints : matrix) {
+            if (ints[col] == num) {
                 return false;
             }
         }
         return true;
     }
 
-    public String printMatrix(int[][] matrix) {
+    private void printMatrixFormatted(int[][] matrix) {
         String answer = "";
 
         for (int i = 0; i < matrix.length; i++) {
@@ -114,6 +119,15 @@ public class Matrix implements  MatrixGenerator{
                 }
             }
         }
-        return answer;
+        System.out.println(answer);
+    }
+
+    public String printMatrix(int[][] matrix) {
+        StringBuilder answer = new StringBuilder();
+        for (int[] ints : matrix) {
+            String temp = Arrays.stream(ints).mapToObj(Integer::toString).collect(Collectors.joining(","));
+            answer.append(temp).append("\n");
+        }
+        return answer.toString();
     }
 }
