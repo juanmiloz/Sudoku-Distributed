@@ -1,0 +1,252 @@
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `SolverI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `SolverI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `SolverI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `SolverI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `SolverI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `SolverI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `SolverI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `SolverI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `SolverI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `SolverI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `SolverI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `SolverI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)
+Exception in thread "main" com.zeroc.Ice.InitializationException
+    reason = "object adapter `MatrixGeneratorI' requires configuration"
+	at com.zeroc.Ice.ObjectAdapterI.<init>(ObjectAdapterI.java:929)
+	at com.zeroc.IceInternal.ObjectAdapterFactory.createObjectAdapter(ObjectAdapterFactory.java:180)
+	at com.zeroc.Ice.CommunicatorI.createObjectAdapter(CommunicatorI.java:111)
+	at Worker.main(Worker.java:21)

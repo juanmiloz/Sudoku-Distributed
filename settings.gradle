@@ -8,6 +8,6 @@
  */
 
 rootProject.name = 'Sudoku'
-include 'Master'
-include 'Worker'
-include 'Intermediary'
+include 'master'
+include 'worker'
+include 'intermediary'

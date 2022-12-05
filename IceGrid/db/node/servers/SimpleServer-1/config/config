@@ -1,0 +1,12 @@
+# Configuration file (12/05/22 14:45:32.533)
+
+# Server configuration
+Ice.Admin.ServerId=SimpleServer-1
+Ice.Admin.Endpoints=tcp -h localhost
+Ice.ProgramName=SimpleServer-1
+# Object adapter Solver
+Solver.Endpoints=tcp -h localhost
+Solver.AdapterId=SimpleServer-1.Solver
+# Server descriptor properties
+Identity=ClaimMatrix-1
+Ice.Default.Locator=DemoIceGrid/Locator:default -h localhost -p 4061

@@ -1,11 +1,11 @@
 import Sudoku.MatrixGeneratorI;
-import Sudoku.MatrixGeneratorIPrx;
+import Sudoku.SolverPrx;
 import com.zeroc.Ice.Communicator;
 import com.zeroc.Ice.Current;
 import com.zeroc.Ice.Util;
 import com.zeroc.IceGrid.QueryPrx;
 
-public class Matrix implements MatrixGeneratorI {
+public class Master implements MatrixGeneratorI {
 
     private final String ANSI_GREEN = "\u001B[32m";
     private final String ANSI_RESET = "\u001B[0m";
@@ -13,22 +13,22 @@ public class Matrix implements MatrixGeneratorI {
     public static void main(String[] args) {
         java.util.List<String> extraArgs = new java.util.ArrayList<>();
 
-        try (Communicator communicator = Util.initialize(args, "Master.cfg", extraArgs)) {
+        try (Communicator communicator = Util.initialize(args, "master.cfg", extraArgs)) {
             //com.zeroc.Ice.ObjectPrx base = communicator.stringToProxy("SimplePrinter:default -p 10000");
-            MatrixGeneratorIPrx twoway = null;
+            SolverPrx twoway = null;
             try {
-                twoway = MatrixGeneratorIPrx.checkedCast(communicator.stringToProxy("GenerateMatrix"));
+                twoway = SolverPrx.checkedCast(communicator.stringToProxy("ClaimMatrix"));
                 //twoway = MatrixGeneratorIPrx.checkedCast(communicator.propertyToProxy("MatrixGenerator.Proxy")).ice_twoway().ice_secure(false);
             } catch (Exception e) {
                 QueryPrx query = QueryPrx.checkedCast(communicator.stringToProxy("DemoIceGrid/Query"));
-                twoway = MatrixGeneratorIPrx.checkedCast(query.findObjectByType("::Sudoku::MatrixGenerator"));
+                twoway = SolverPrx.checkedCast(query.findObjectByType("::Sudoku::SolverI"));
             }
 
             if(twoway == null){
                 throw new Error("Invalid proxy");
             }
             //Sudoku.MatrixGeneratorIPrx matrixGenerator = twoway.ice_twoway();
-            twoway.generateStage(10);
+            twoway.claimMatrix();
         }
     }
 

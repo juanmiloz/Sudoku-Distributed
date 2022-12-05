@@ -1,16 +1,15 @@
-import Sudoku.SolverI;
 import com.zeroc.Ice.*;
 import com.zeroc.Ice.Object;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Worker implements SolverI{
+public class Worker{
 
     public static void main(String[] args) {
         List<String> extraArgs = new ArrayList<String>();
 
-        try (Communicator communicator = Util.initialize(args, "Worker.cfg", extraArgs)) {
+        try (Communicator communicator = Util.initialize(args, "worker.cfg", extraArgs)) {
 
             if (!extraArgs.isEmpty()) {
                 System.out.println("too many arguments");
@@ -18,18 +17,13 @@ public class Worker implements SolverI{
                     System.out.println(v);
                 }
             }
-            ObjectAdapter adapter = communicator.createObjectAdapter("SolverI");
-            com.zeroc.Ice.Object object = new Solver();
+            ObjectAdapter adapter = communicator.createObjectAdapter("Solver");
+            Object object = new SolverI();
             String identity = communicator.getProperties().getProperty("Identity");
             adapter.add(object, Util.stringToIdentity(identity));
             adapter.activate();
             System.out.println("Server running ...");
             communicator.waitForShutdown();
         }
-    }
-
-    @Override
-    public void callMatrix(Current current) {
-
     }
 }

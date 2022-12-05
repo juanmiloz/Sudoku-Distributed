@@ -12,7 +12,7 @@ module Sudoku{
         void addElementToStack(StringMatrix element);
     };
 
-    interface SolverI{
-        void callMatrix();
+    interface Solver{
+        void claimMatrix();
     };
 };

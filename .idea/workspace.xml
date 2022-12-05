@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6a569f44-84fa-45dc-b3b7-c2d5fee8cc50" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IceGrid/db/SimpleServer.err" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IceGrid/db/SimpleServer.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IceGrid/db/node/servers/SimpleServer-1/config/config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IceGrid/db/node/servers/SimpleServer-1/revision" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IceGrid/db/node/servers/SimpleServer-2/config/config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IceGrid/db/node/servers/SimpleServer-2/revision" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IceGrid/db/node/servers/SimpleServer-3/config/config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IceGrid/db/node/servers/SimpleServer-3/revision" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IceGrid/db/registry/data.mdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/IceGrid/db/registry/lock.mdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceGrid/Application.xml" beforeDir="false" afterPath="$PROJECT_DIR$/IceGrid/Application.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceGrid/config.grid" beforeDir="false" afterPath="$PROJECT_DIR$/IceGrid/config.grid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master/src/main/java/Master.java" beforeDir="false" afterPath="$PROJECT_DIR$/Master/src/main/java/Master.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master/src/main/java/Matrix.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master/src/main/resource/Master.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sudoku.ice" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku.ice" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Worker/src/main/java/Solver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Worker/src/main/java/SolverI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Worker/src/main/java/SolverI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Worker/src/main/java/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/Worker/src/main/java/Worker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Worker/src/main/resource/Worker.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Worker/src/main/resources/Worker.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/Worker/src/main/resources/Worker.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2ITTYF7RnFjHsqY21ZLplAR1zl1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/juanm/Desktop/Sudoku&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6a569f44-84fa-45dc-b3b7-c2d5fee8cc50" name="Changes" comment="" />
+      <created>1670204618280</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670204618280</updated>
+      <workItem from="1670204619772" duration="14695000" />
+      <workItem from="1670262339618" duration="5007000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/master/src/main/java/Master.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
