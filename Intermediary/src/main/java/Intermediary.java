@@ -1,16 +1,19 @@
-import com.zeroc.Ice.Communicator;
-import com.zeroc.Ice.ObjectAdapter;
-import com.zeroc.Ice.Util;
+import Sudoku.ControllerI;
+import Sudoku.ControllerIPrx;
+import Sudoku.PersistentQueueControllerI;
+import Sudoku.PersistentQueueControllerIPrx;
+import com.zeroc.Ice.*;
+import com.zeroc.Ice.Object;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Intermediary {
+public class Intermediary{
 
     public static void main(String[] args) {
-       /* List<String> extraArgs = new ArrayList<String>();
+        List<String> extraArgs = new ArrayList<String>();
 
-        try (Communicator communicator = Util.initialize(args, "config.server", extraArgs)) {
+        try (Communicator communicator = Util.initialize(args, "intermediary.cfg", extraArgs)) {
 
             if (!extraArgs.isEmpty()) {
                 System.out.println("too many arguments");
@@ -18,14 +21,19 @@ public class Intermediary {
                     System.out.println(v);
                 }
             }
-            ObjectAdapter adapter = communicator.createObjectAdapter("Printer");
-            //Object object = new PrinterI();
+            ObjectAdapter adapter = communicator.createObjectAdapter("SolverQueue");
+            PersistentQueueControllerI object = new PersistentQueueController();
             String identity = communicator.getProperties().getProperty("Identity");
-            //adapter.add(object, com.zeroc.Ice.Util.stringToIdentity("SimplePrinter"));
+            ObjectPrx objectPrx = adapter.add(object, Util.stringToIdentity(identity));
+            PersistentQueueControllerIPrx persistentQueueControllerIPrx = PersistentQueueControllerIPrx
+                    .uncheckedCast(objectPrx);
             adapter.activate();
-            System.out.println("Server running ...");
+            System.out.println("Server running queue...");
+            ControllerIPrx twoWay = ControllerIPrx.checkedCast(
+                    communicator.propertyToProxy("Master.Proxy")).ice_twoway().ice_secure(false);
+            ControllerIPrx master = twoWay.ice_twoway();
+            master.registerQueueNode(persistentQueueControllerIPrx);
             communicator.waitForShutdown();
-        }*/
+        }
     }
-
 }

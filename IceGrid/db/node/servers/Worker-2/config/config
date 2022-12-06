@@ -1,0 +1,12 @@
+# Configuration file (12/06/22 06:22:46.552)
+
+# Server configuration
+Ice.Admin.ServerId=Worker-2
+Ice.Admin.Endpoints=tcp -h localhost
+Ice.ProgramName=Worker-2
+# Object adapter ControllerI
+ControllerI.Endpoints=tcp -h localhost
+ControllerI.AdapterId=Worker-2.ControllerI
+# Server descriptor properties
+Identity=SudokuSolver-2
+Ice.Default.Locator=DemoIceGrid/Locator:default -h localhost -p 4061

@@ -1,0 +1,12 @@
+# Configuration file (12/06/22 06:22:46.553)
+
+# Server configuration
+Ice.Admin.ServerId=Intermediary-1
+Ice.Admin.Endpoints=tcp -h localhost
+Ice.ProgramName=Intermediary-1
+# Object adapter SolverQueue
+SolverQueue.Endpoints=tcp -h localhost
+SolverQueue.AdapterId=Intermediary-1.SolverQueue
+# Server descriptor properties
+Identity=PersistentQueue-1
+Ice.Default.Locator=DemoIceGrid/Locator:default -h localhost -p 4061

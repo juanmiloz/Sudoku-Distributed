@@ -1,23 +1,34 @@
 <icegrid>
     <application name="Simple">
-        <server-template id="SimpleServer">
+        <server-template id="WorkerServer">
             <parameter name="index"/>
-            <server id="SimpleServer-${index}" exe="java" activation="on-demand">
+            <server id="Worker-${index}" exe="java" activation="on-demand">
 
                 <option>-jar</option>
                 <option>../Worker/build/libs/worker.jar</option>
-                <adapter name="Solver" endpoints="tcp -h localhost">
-                    <object identity="ClaimMatrix-${index}" type="::Sudoku::SolverI" property="Identity"/>
+                <adapter name="ControllerI" endpoints="tcp -h localhost">
+                    <object identity="SudokuSolver-${index}" type="::Sudoku::SolverI" property="Identity"/>
+                </adapter>
+
+            </server>
+        </server-template>
+
+        <server-template id="IntermediaryServer">
+            <parameter name="index"/>
+            <server id="Intermediary-${index}" exe="java" activation="always">
+                <option>-jar</option>
+                <option>../Intermediary/build/libs/intermediary.jar</option>
+                <adapter name="SolverQueue" endpoints="tcp -h localhost">
+                    <object identity="PersistentQueue-${index}" type="::Sudoku::PersistentQueueController" property="Identity"/>
                 </adapter>
 
             </server>
         </server-template>
 
         <node name="node1">
-            <server-instance template="SimpleServer" index="1"/>
-            <server-instance template="SimpleServer" index="2"/>
-            <server-instance template="SimpleServer" index="3"/>
+            <server-instance template="WorkerServer" index="1"/>
+            <server-instance template="WorkerServer" index="2"/>
+            <server-instance template="IntermediaryServer" index="1"/>
         </node>
-
     </application>
 </icegrid>

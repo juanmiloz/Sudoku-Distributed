@@ -1,3 +1,4 @@
+import Sudoku.Solver;
 import com.zeroc.Ice.*;
 import com.zeroc.Ice.Object;
 
@@ -17,12 +18,12 @@ public class Worker{
                     System.out.println(v);
                 }
             }
-            ObjectAdapter adapter = communicator.createObjectAdapter("Solver");
+            ObjectAdapter adapter = communicator.createObjectAdapter("ControllerI");
             Object object = new SolverI();
             String identity = communicator.getProperties().getProperty("Identity");
             adapter.add(object, Util.stringToIdentity(identity));
             adapter.activate();
-            System.out.println("Server running ...");
+            System.out.println("Server running worker ...");
             communicator.waitForShutdown();
         }
     }
