@@ -1,4 +1,4 @@
-# Configuration file (12/06/22 06:22:46.553)
+# Configuration file (12/06/22 14:37:35.824)
 
 # Server configuration
 Ice.Admin.ServerId=Intermediary-1
@@ -7,6 +7,7 @@ Ice.ProgramName=Intermediary-1
 # Object adapter SolverQueue
 SolverQueue.Endpoints=tcp -h localhost
 SolverQueue.AdapterId=Intermediary-1.SolverQueue
+SolverQueue.ReplicaGroupId=ReplicatedAdapter
 # Server descriptor properties
 Identity=PersistentQueue-1
 Ice.Default.Locator=DemoIceGrid/Locator:default -h localhost -p 4061

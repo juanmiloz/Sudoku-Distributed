@@ -26,12 +26,11 @@ module Sudoku{
 
     interface ControllerI{
         void addSolution(MutableByteMatrix solution);
-        void addElementToQueue(Node element);
-        void registerQueueNode(PersistentQueueControllerI* cl);
+        bool addElementToQueue(Node element);
         void notifyFreeNode();
     };
 
     interface Solver{
-        void solve(Node sudoku, BooleanMatrix initial, ControllerI* controllerCl);
+        bool solve(Node sudoku, BooleanMatrix initial, ControllerI* controllerCl);
     };
 };

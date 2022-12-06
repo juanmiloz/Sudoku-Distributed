@@ -1,42 +1,44 @@
 import Sudoku.*;
+import com.zeroc.Ice.Communicator;
 import com.zeroc.Ice.Current;
+import com.zeroc.IceGrid.QueryPrx;
 import interfaces.MatrixGeneratorI;
 import interfaces.PrinterI;
 
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
 
 public class Controller implements ControllerI {
 
     private SolverPrx solverPrx;
 
-    private MatrixGeneratorI matrixGenerator;
-
-    private Iterator<PersistentQueueControllerIPrx> actualQueue;
+    private final MatrixGeneratorI matrixGenerator;
 
     private ControllerIPrx proxy;
 
-    private Stack<PersistentQueueControllerIPrx> usedQueues;
+    private PersistentQueueControllerIPrx persistentQueueControllerIPrx;
 
-    private Queue<PersistentQueueControllerIPrx> unusedQueues;
+    private String[] args;
+
+    private final Communicator communicator;
+
+    private ThreadPoolExecutor pool;
 
     private long numSolutions;
 
     private boolean[][] initial;
 
-    public Controller(SolverPrx solverPrx) {
-        this.solverPrx = solverPrx;
+    public Controller(Communicator communicator) {
+        this.communicator = communicator;
+        releasePersistentControllerIPrx();
+        releaseSolverPrx();
         matrixGenerator = new Matrix();
-        unusedQueues = new LinkedList<PersistentQueueControllerIPrx>();
-        usedQueues = new Stack<>();
+        pool = (ThreadPoolExecutor) Executors.newCachedThreadPool();
         numSolutions = 0;
     }
 
 
     public void solve() {
-        System.out.print("Number de solutions: ");
         Node node = new Node();
         node.col = new MutableByte((byte) 0);
         node.row = new MutableByte((byte) 0);
@@ -44,37 +46,42 @@ public class Controller implements ControllerI {
         MutableByte[][] sudoku = parseString(sudokuToSolve);
         node.sol = sudoku;
         initial = initialize(sudoku);
-        solverPrx.solve(node, initial, proxy);
+
+        if (recursiveSolve(node, initial, proxy)) {
+            System.out.println("Something went wrong");
+        }
+    }
+
+    private boolean recursiveSolve(Node node, boolean[][] initial, ControllerIPrx proxy) {
+        if (!solverPrx.solve(node, initial, proxy))
+            return false;
+        recursiveSolve(node, initial, proxy);
+        return true;
     }
 
     public void notifyFreeNode(Current current) {
         Node node = pollNode();
         if (node != null) {
-            solverPrx.solve(node,initial,proxy);
+            solverLauncher(node);
         }
+    }
+
+    private void solverLauncher(Node node) {
+        pool.execute(() -> {
+            releaseSolverPrx();
+            if (!solverPrx.solve(node, initial, proxy)){
+                offerNode(node);
+                notifyFreeNode(null);
+            }
+        });
     }
 
     private void offerNode(Node node) {
-        if (usedQueues.isEmpty()) {
-            if (unusedQueues.isEmpty()) {
-                throw new RuntimeException("there is not queue nodes");
-            }
-            usedQueues.push(unusedQueues.poll());
-        }
-        if (!usedQueues.peek().offerNode(node)) {
-            if (!unusedQueues.isEmpty()) {
-                usedQueues.push(unusedQueues.poll());
-            }
-        }
+        persistentQueueControllerIPrx.offerNode(node);
     }
 
     private Node pollNode() {
-        Node node = usedQueues.peek().pollNode();
-        if (usedQueues.peek().isEmpty()) {
-            PersistentQueueControllerIPrx temp = usedQueues.pop();
-            unusedQueues.offer(temp);
-        }
-        return node;
+        return persistentQueueControllerIPrx.pollNode();
     }
 
     private boolean[][] initialize(MutableByte[][] initial) {
@@ -94,10 +101,13 @@ public class Controller implements ControllerI {
         MutableByte[][] response = new MutableByte[9][9];
         String[] rows = sudoku.split("\n");
         for (byte row = 0; row < 9; row++) {
-            String[] cols = rows[row].split(",");
+            String[] cols = rows[row].split(",", -1);
             for (byte col = 0; col < rows.length; col++) {
-                int byteT = Integer.parseInt(cols[col]);
-                response[row][col] = new MutableByte((byte) byteT);
+                if (cols[col].equals("")) {
+                    response[row][col] = new MutableByte((byte) 0);
+                } else {
+                    response[row][col] = new MutableByte(Byte.parseByte(cols[col]));
+                }
             }
         }
         return response;
@@ -105,25 +115,61 @@ public class Controller implements ControllerI {
 
     @Override
     public void addSolution(MutableByte[][] solution, Current current) {
-        numSolutions ++;
+        numSolutions++;
         PrinterI printerI = new FilePrinter();
         printerI.printMatrix(solution);
         printerI = new ConsolePrinter();
         printerI.printMatrix(solution);
+        System.out.println("Solutions found until now: " + numSolutions);
     }
 
     @Override
-    public void addElementToQueue(Node element, Current current) {
+    public boolean addElementToQueue(Node element, Current current) {
+        if (element == null) {
+            return false;
+        }
+
+        System.out.println("Adding element to queue");
+        PrinterI printerI = new ConsolePrinter();
+        printerI.printMatrix(element.sol);
+
         offerNode(element);
-    }
-
-    @Override
-    public void registerQueueNode(PersistentQueueControllerIPrx cl, Current current) {
-        unusedQueues.add(cl);
-        notifyFreeNode(current);
+        return true;
     }
 
     public void initializeProxy(ControllerIPrx proxy) {
         this.proxy = proxy;
+    }
+
+
+    public void releaseSolverPrx() {
+
+        try {
+            solverPrx = SolverPrx.checkedCast(communicator.stringToProxy("SudokuSolver"));
+        } catch (Exception e) {
+            QueryPrx query = QueryPrx.checkedCast(communicator.stringToProxy("DemoIceGrid/Query"));
+            solverPrx = SolverPrx.checkedCast(query.findObjectByType("::Sudoku::SolverI"));
+        }
+
+        if (solverPrx == null) {
+            throw new Error("Invalid proxy");
+        }
+
+
+    }
+
+    private void releasePersistentControllerIPrx() {
+
+        try {
+            persistentQueueControllerIPrx = PersistentQueueControllerIPrx.checkedCast(communicator.stringToProxy("PersistentQueue"));
+        } catch (Exception e) {
+            QueryPrx query = QueryPrx.checkedCast(communicator.stringToProxy("DemoIceGrid/Query"));
+            persistentQueueControllerIPrx = PersistentQueueControllerIPrx.checkedCast(query.findObjectByType("::Sudoku::PersistentQueueController"));
+        }
+
+        if (persistentQueueControllerIPrx == null) {
+            throw new Error("Invalid queue proxy");
+        }
+
     }
 }

@@ -33,7 +33,6 @@ public class Matrix implements MatrixGeneratorI {
             }
             matrix[ranRow][ranCol] = ranNum;
         }
-        printMatrixFormatted(matrix);
 
         return printMatrix(matrix);
     }
@@ -100,7 +99,7 @@ public class Matrix implements MatrixGeneratorI {
 
         for (int i = 0; i < matrix.length; i++) {
             if (i != 0 && i % 3 == 0) {
-                answer += "=======================================";
+                answer += "=======================================" + "/n";
             }
             for (int j = 0; j < matrix[i].length; j++) {
                 if (j != 0 && j % 3 == 0) {
@@ -125,7 +124,13 @@ public class Matrix implements MatrixGeneratorI {
     public String printMatrix(int[][] matrix) {
         StringBuilder answer = new StringBuilder();
         for (int[] ints : matrix) {
-            String temp = Arrays.stream(ints).mapToObj(Integer::toString).collect(Collectors.joining(","));
+            String temp = Arrays.stream(ints).mapToObj(Integer::toString).map(it-> {
+                if (it.equals("0")) {
+                    return "";
+                } else {
+                    return it;
+                }
+            }).collect(Collectors.joining(","));
             answer.append(temp).append("\n");
         }
         return answer.toString();

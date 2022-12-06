@@ -7,7 +7,7 @@ import java.util.Queue;
 
 public class PersistentQueueController implements PersistentQueueControllerI{
 
-    private Queue<Node> queue;
+    private final Queue<Node> queue;
 
 
     public PersistentQueueController(){

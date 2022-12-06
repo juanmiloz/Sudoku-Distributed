@@ -23,7 +23,7 @@ public class Worker{
             String identity = communicator.getProperties().getProperty("Identity");
             adapter.add(object, Util.stringToIdentity(identity));
             adapter.activate();
-            System.out.println("Server running worker ...");
+            System.out.println("Server running worker...");
             communicator.waitForShutdown();
         }
     }

@@ -29,10 +29,6 @@ public class Intermediary{
                     .uncheckedCast(objectPrx);
             adapter.activate();
             System.out.println("Server running queue...");
-            ControllerIPrx twoWay = ControllerIPrx.checkedCast(
-                    communicator.propertyToProxy("Master.Proxy")).ice_twoway().ice_secure(false);
-            ControllerIPrx master = twoWay.ice_twoway();
-            master.registerQueueNode(persistentQueueControllerIPrx);
             communicator.waitForShutdown();
         }
     }

@@ -5,32 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a569f44-84fa-45dc-b3b7-c2d5fee8cc50" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Intermediary/src/main/java/PersistentQueueController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Intermediary/src/main/java/dataStructures/PersistentQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Intermediary/src/main/java/dataStructures/SudokuAliveNodesPersistence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Intermediary/src/main/java/interfaces/SudokuAliveNodesPersistenceI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Intermediary/src/main/resources/intermediary.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Master/src/main/java/ConsolePrinter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Master/src/main/java/FilePrinter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Master/src/main/java/Matrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Master/src/main/java/interfaces/MatrixGeneratorI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Master/src/main/java/interfaces/PrinterI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceGrid/Application.xml" beforeDir="false" afterPath="$PROJECT_DIR$/IceGrid/Application.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceGrid/db/node/servers/SimpleServer-1/config/config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceGrid/db/node/servers/SimpleServer-1/revision" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceGrid/db/node/servers/SimpleServer-2/config/config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceGrid/db/node/servers/SimpleServer-2/revision" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceGrid/db/node/servers/SimpleServer-3/config/config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/IceGrid/db/node/servers/SimpleServer-3/revision" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceGrid/config.grid" beforeDir="false" afterPath="$PROJECT_DIR$/IceGrid/config.grid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceGrid/db/node/servers/Intermediary-1/config/config" beforeDir="false" afterPath="$PROJECT_DIR$/IceGrid/db/node/servers/Intermediary-1/config/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceGrid/db/node/servers/Worker-1/config/config" beforeDir="false" afterPath="$PROJECT_DIR$/IceGrid/db/node/servers/Worker-1/config/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IceGrid/db/node/servers/Worker-2/config/config" beforeDir="false" afterPath="$PROJECT_DIR$/IceGrid/db/node/servers/Worker-2/config/config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IceGrid/db/registry/data.mdb" beforeDir="false" afterPath="$PROJECT_DIR$/IceGrid/db/registry/data.mdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intermediary/src/main/java/Intermediary.java" beforeDir="false" afterPath="$PROJECT_DIR$/Intermediary/src/main/java/Intermediary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Master/src/main/java/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Master/src/main/java/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Master/src/main/java/Master.java" beforeDir="false" afterPath="$PROJECT_DIR$/Master/src/main/java/Master.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Master/src/main/resources/master.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/Master/src/main/resources/master.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediary/src/main/java/Intermediary.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediary/src/main/java/PersistentQueueController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediary/src/main/java/dataStructures/PersistentQueue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediary/src/main/java/dataStructures/SudokuAliveNodesPersistence.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediary/src/main/java/interfaces/SudokuAliveNodesPersistenceI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intermediary/src/main/resources/intermediary.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master/src/main/java/ConsolePrinter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master/src/main/java/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master/src/main/java/FilePrinter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master/src/main/java/Master.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master/src/main/java/Matrix.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master/src/main/java/interfaces/MatrixGeneratorI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master/src/main/java/interfaces/PrinterI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Master/src/main/resources/master.cfg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Sudoku.ice" beforeDir="false" afterPath="$PROJECT_DIR$/Sudoku.ice" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Worker/src/main/java/SolverI.java" beforeDir="false" afterPath="$PROJECT_DIR$/Worker/src/main/java/SolverI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Worker/src/main/java/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/Worker/src/main/java/Worker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Worker/src/main/java/SolverI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Worker/src/main/java/Worker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Worker/src/main/resources/Worker.cfg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,9 +46,22 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Sudoku" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Sudoku" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -77,15 +91,17 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "true",
-    "last_opened_file_path": "C:/Users/juanm/Desktop/Sudoku/intermediary/src/main/resource",
+    "jdk.selected.JAVA_MODULE": "11",
+    "last_opened_file_path": "D:/Software/Sudoku-Distributed",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.proportion": "0.15039062",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -102,6 +118,69 @@
       <recent name="" />
     </key>
   </component>
+  <component name="RunManager" selected="Gradle.Sudoku-Distributed [build]">
+    <configuration name="Sudoku-Distributed [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Sudoku-Distributed [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="intermediary" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="intermediary" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Sudoku-Distributed [build]" />
+        <item itemvalue="Gradle.Sudoku-Distributed [clean]" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -114,6 +193,7 @@
       <workItem from="1670262339618" duration="5132000" />
       <workItem from="1670293442018" duration="7538000" />
       <workItem from="1670301014582" duration="24864000" />
+      <workItem from="1670337736427" duration="17839000" />
     </task>
     <servers />
   </component>

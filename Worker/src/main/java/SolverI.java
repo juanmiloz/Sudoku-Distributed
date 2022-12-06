@@ -18,20 +18,25 @@ public class SolverI implements Sudoku.Solver {
     }
 
     @Override
-    public void solve(Node sudoku, boolean[][] initialSudoku , ControllerIPrx controllerIPrx, Current current) {
+    public boolean solve(Node sudoku, boolean[][] initialSudoku, ControllerIPrx controllerIPrx, Current current) {
         try {
             InetAddress iaLocal;
             iaLocal = InetAddress.getLocalHost();
             String hostname = iaLocal.getHostName();
-            sudokuSolverRAndP(sudoku,initialSudoku, controllerIPrx);
-            controllerIPrx.notifyFreeNode();
+            if (sudoku.sol.length == 9 && sudoku.sol[0].length == 9) {
+                sudokuSolverRAndP(sudoku, initialSudoku, controllerIPrx);
+                controllerIPrx.notifyFreeNode();
+                return true;
+            } else {
+                return false;
+            }
         } catch (java.net.UnknownHostException e) {
             System.out.println("error");
         }
+        return false;
     }
 
     public void sudokuSolverRAndP(Node currentNode, boolean[][] initial, ControllerIPrx controllerIPrx) {
-
         if (!initial[currentNode.row.value][currentNode.col.value]) {
             for (byte possibleNumber = 1; possibleNumber < 10; possibleNumber++) {
                 MutableByte temp = new MutableByte(currentNode.sol[currentNode.row.value][currentNode.col.value].value);
@@ -55,14 +60,21 @@ public class SolverI implements Sudoku.Solver {
             y.sol = Arrays.stream(x.sol).map(it -> Arrays.stream(it).toArray(MutableByte[]::new)).toArray(MutableByte[][]::new);
             y.row = new MutableByte((byte) (x.row.value + 1));
             y.col = new MutableByte((byte) 0);
-            controllerIPrx.addElementToQueue(y);
+            addElementToQueueRecursive(controllerIPrx, y);
         } else if (x.row.value <= 8 && x.col.value < 8) {
             y.sol = Arrays.stream(x.sol).map(it -> Arrays.stream(it).toArray(MutableByte[]::new)).toArray(MutableByte[][]::new);
             y.row = new MutableByte((x.row.value));
             y.col = new MutableByte((byte) (x.col.value + 1));
-            controllerIPrx.addElementToQueue(y);
+            addElementToQueueRecursive(controllerIPrx, y);
         }
     }
+
+    private void addElementToQueueRecursive(ControllerIPrx controllerIPrx, Node y) {
+        if (controllerIPrx.addElementToQueue(y))
+            return;
+        addElementToQueueRecursive(controllerIPrx, y);
+    }
+
     private boolean isValid(byte i, byte j, MutableByte[][] sol) {
         List<Callable<Boolean>> todo = new ArrayList<Callable<Boolean>>(3);
         todo.add(new ValidateCol(sol, i, j));
@@ -71,7 +83,7 @@ public class SolverI implements Sudoku.Solver {
 
         try {
             List<Future<Boolean>> answers = pool.invokeAll(todo);
-            for(Future<Boolean> answer:answers) {
+            for (Future<Boolean> answer : answers) {
                 if (!answer.get()) {
                     return false;
                 }

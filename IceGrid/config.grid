@@ -25,7 +25,7 @@ IceGrid.Registry.Discovery.Interface=127.0.0.1
 # IceGrid node configuration.
 #
 IceGrid.Node.Name=node1
-IceGrid.Node.Endpoints=default -h localhost
+IceGrid.Node.Endpoints=default -h localhost -p 4062
 IceGrid.Node.Data=db/node
 IceGrid.Node.CollocateRegistry=1
 #IceGrid.Node.Output=db

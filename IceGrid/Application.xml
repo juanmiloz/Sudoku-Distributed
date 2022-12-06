@@ -1,12 +1,15 @@
 <icegrid>
     <application name="Simple">
+        <replica-group id="ReplicatedAdapter">
+            <load-balancing type="adaptive"/>
+        </replica-group>
         <server-template id="WorkerServer">
             <parameter name="index"/>
-            <server id="Worker-${index}" exe="java" activation="on-demand">
+            <server id="Worker-${index}" exe="java" activation="always">
 
                 <option>-jar</option>
                 <option>../Worker/build/libs/worker.jar</option>
-                <adapter name="ControllerI" endpoints="tcp -h localhost">
+                <adapter name="ControllerI" endpoints="tcp -h localhost" replica-group="ReplicatedAdapter">
                     <object identity="SudokuSolver-${index}" type="::Sudoku::SolverI" property="Identity"/>
                 </adapter>
 
@@ -15,13 +18,12 @@
 
         <server-template id="IntermediaryServer">
             <parameter name="index"/>
-            <server id="Intermediary-${index}" exe="java" activation="always">
+            <server id="Intermediary-${index}" exe="java" activation="on-demand">
                 <option>-jar</option>
                 <option>../Intermediary/build/libs/intermediary.jar</option>
-                <adapter name="SolverQueue" endpoints="tcp -h localhost">
+                <adapter name="SolverQueue" endpoints="tcp -h localhost" replica-group="ReplicatedAdapter">
                     <object identity="PersistentQueue-${index}" type="::Sudoku::PersistentQueueController" property="Identity"/>
                 </adapter>
-
             </server>
         </server-template>
 
